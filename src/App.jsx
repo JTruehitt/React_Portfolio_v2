@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-// import Layout from './components/Layout';
+import Home from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ContactPage from './pages/ContactPage';
@@ -15,15 +15,14 @@ function App() {
       <Router>
         <cover-l centered='center-l'>
           <Navbar />
-          {/* <Layout> */}
-          <center-l>
+          <center-l max="1200px">
             <Routes>
-              <Route path="/" element={<AboutPage />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<AboutPage />} />
               <Route path="/projects" element={<ProjectsPage />} />
               <Route path="/contact" element={<ContactPage />} />
             </Routes>
           </center-l>
-          {/* </Layout> */}
           <Footer />
         </cover-l>
       </Router>

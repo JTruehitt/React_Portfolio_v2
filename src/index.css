@@ -1,0 +1,25 @@
+li > * {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    transition: all 1s ease;
+    border-radius: 8px; 
+    padding: 5px 10px; 
+    flex: 1;
+    text-align: center;
+  }
+  
+  .active {
+    background: #f5f5f5; 
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); 
+    font-weight: 600;
+    color: #111;
+  }
+  
+  .active > a {
+    color: inherit; 
+    text-decoration: none; 
+  }
+  

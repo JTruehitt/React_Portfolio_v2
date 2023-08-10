@@ -1,14 +1,19 @@
+import ProjectCard from './ProjectCard';
+import { Grid } from '../utils/LayoutComponents/layout.js';
+import projectList from '../assets/projectlist.js';
+
 export default function Projects() {
-    return (
-        <div>
-            <h1>About</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-                voluptatum, quibusdam, quia, quae voluptate voluptas quod
-                voluptatibus quos doloribus quas natus. Quisquam, quibusdam,
-                quia, quae voluptate voluptas quod voluptatibus quos doloribus
-                quas natus.
-            </p>
-        </div>
-    );
+  return (
+        <grid-l min='calc(var(--measure) / 3)'>
+          {projectList.map((project, index) => (
+            <ProjectCard
+              key={index}
+              title={project.title}
+              description={project.description}
+              image={project.image}
+              link={project.link}
+            />
+          ))}
+        </grid-l>
+  );
 }
